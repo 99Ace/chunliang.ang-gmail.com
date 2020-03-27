@@ -128,6 +128,4 @@ AUTHENTICATION_BACKENDS = (
     'accounts.backends.CaseInsensitiveAuth' 
 )
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
