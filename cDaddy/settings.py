@@ -55,7 +55,7 @@ ROOT_URLCONF = 'cDaddy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,3 +127,7 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
     'accounts.backends.CaseInsensitiveAuth' 
 )
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
